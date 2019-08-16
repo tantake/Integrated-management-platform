@@ -1,0 +1,129 @@
+<template>
+<div>
+  <div id="app">
+    <a-menu
+    v-model="current"
+    mode="horizontal"
+  >
+    <a-menu-item key="mail">
+        <router-link to="/1-1">1-1</router-link>
+    </a-menu-item>
+    <a-menu-item key="app" disabled>
+      <a-icon type="appstore" />Navigation Two
+    </a-menu-item>
+    <a-sub-menu>
+      <span slot="title" class="submenu-title-wrapper"><a-icon type="setting" />Navigation Three - Submenu</span>
+      <a-menu-item-group title="Item 1">
+        <a-menu-item key="setting:1">Option 1</a-menu-item>
+        <a-menu-item key="setting:2">Option 2</a-menu-item>
+      </a-menu-item-group>
+      <a-menu-item-group title="Item 2">
+        <a-menu-item key="setting:3">Option 3</a-menu-item>
+        <a-menu-item key="setting:4">Option 4</a-menu-item>
+      </a-menu-item-group>
+    </a-sub-menu>
+    <a-menu-item key="alipay">
+      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">Navigation Four - Link</a>
+    </a-menu-item>
+  </a-menu>
+         <a-locale-provider :locale="locale">
+       <router-view></router-view>
+            </a-locale-provider>
+  </div>
+</div>
+</template>
+
+<script>
+import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN';
+  export default {
+    name: 'App',
+    data() {
+      return{
+locale:zhCN
+      }
+    }
+  }
+</script>
+<style >
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+  }
+
+  article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    display: block
+  }
+
+
+
+
+
+  li {
+    list-style: none
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px
+  }
+
+  ::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px
+  }
+
+  html, body {
+    width: 100%
+  }
+
+  body {
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  }
+
+  html {
+    font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*关闭按钮*/
+  .edit-close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 32px;
+    height: 32px;
+  }
+
+</style>
+
