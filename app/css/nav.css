@@ -1,0 +1,72 @@
+nav {
+  position: fixed;
+  top: 0;
+  background-color: #20505F;
+  height: 80px;
+  width: 100%;
+}
+nav > ul {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav > ul .forTi {
+  width: 600px;
+  height: 100px;
+  position: relative;
+  color: #F3D972;
+  text-align: center;
+  font-size: 46px;
+  line-height: 100px;
+}
+nav > ul > li {
+  font-size: 24px;
+  color: #fff;
+}
+nav > ul > li:hover {
+  cursor: pointer;
+}
+nav > ul .bechoice {
+  border-bottom: 2px solid yellow;
+}
+.forTi::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: #20505F;
+  transform: perspective(0.5em) rotateX(-2deg);
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+.forSearch {
+  width: 400px;
+  height: 48px;
+  position: absolute;
+  left: 48px;
+  top: 120px;
+}
+.forSearch .ant-btn-primary {
+  background: radial-gradient(rgba(6, 90, 210, 0.55), #ffff00);
+  border: none;
+}
+.forSearch .ant-input-lg {
+  background-color: rgba(32, 80, 95, 0.7);
+  box-shadow: 0 0 4px #ffff00;
+}
+.forImg {
+  text-align: center;
+  position: relative;
+  top: 55px;
+}
+.forImg img {
+  vertical-align: middle;
+  border-style: none;
+  position: relative;
+  left: -20px;
+}
