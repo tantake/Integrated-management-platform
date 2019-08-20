@@ -128,33 +128,3 @@ gulp.task('scripts', ['js'], () => {
 
 
 })
-
-gulp.task('script-t', ['js'], () => {
-    return gulp.src['app/main.js']
-        .pipe(plumber({
-            errorHandler: function() {}
-        }))
-        .pipe(named())
-        .pipe(gulpWebpack({
-            module: {
-                loaders: [{
-                    test: /\.js$/,
-                    loader: 'babel-loader'
-                }]
-            }
-        }), null, (err, stats) => {
-            log(`Finished '${colors,cyan('scripts')}'`, stats.toString({
-                chunks: false
-            }))
-        })
-        .pipe(gulp.dest('package'))
-        .pipe(rename({
-            basename: 'cp',
-            extname: '.min.s'
-        }))
-        .pipe(uglify({ compress: { properties: false }, output: { 'quote_key': true } }))
-        .pipe(gulp.dest('server/page'))
-        .pipe(gulpif(args.watch, livereload()))
-
-
-})

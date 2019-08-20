@@ -103,8 +103,8 @@
 </template>
 
 <script>
-import util from "../../js/util";
-import commInterface from "../../js/commInterface";
+import util from "../../util/util";
+import commInterface from "../../util/commInterface";
 import PageContext from "../../components/PageContext.vue";
 
 export default {
@@ -373,8 +373,8 @@ export default {
 };
 </script>
 <style scoped>
-@import "../../css/outinRecordList.css";
-@import "../../css/commen.css";
+@import "../../assets/css/outinRecordList.css";
+@import "../../assets/css/commen.css";
 .ant-pagination {
   text-align: center !important;
 }

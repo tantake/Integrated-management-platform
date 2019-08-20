@@ -39,7 +39,7 @@ export default {
       tab1: "../images/tab1.png",
       tabList: ["辖区", "报警"],
       status: 0,
-      imgUrl: "../images/lightline.png",
+      imgUrl: "../assets/images/lightline.png",
       imgUrl2: "../images/backup.png",
       list: [
         {
@@ -88,7 +88,7 @@ export default {
 </script>
 
 <style>
-@import "../css/nav.css";
+@import "../assets/css/nav.css";
 .home {
   width: 100%;
   height: 100%;
